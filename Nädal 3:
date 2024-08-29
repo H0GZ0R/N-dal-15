@@ -1,0 +1,159 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the color of the traffic light:");
+        string userColor = Console.ReadLine().ToLower();
+        
+        if (userColor == "red")
+        {
+            Console.WriteLine("Hold");
+        }
+        else if (userColor == "yellow")
+        {
+            Console.WriteLine("Get ready");
+        }
+        else if (userColor == "green")
+        {
+            Console.WriteLine("Go!");
+        }
+        else
+        {
+            Console.WriteLine("The traffic light is broken.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the color of the traffic light:");
+        string userColor = Console.ReadLine().ToLower();
+        
+        if (userColor == "red")
+        {
+            Console.WriteLine("Hold");
+        }
+        else if (userColor == "yellow")
+        {
+            Console.WriteLine("Get ready");
+        }
+        else if (userColor == "green")
+        {
+            Console.WriteLine("Go!");
+        }
+        else
+        {
+            Console.WriteLine("The traffic light is broken.");
+        }
+    }
+}
+
+
+using System;
+using System.Globalization;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string tt = DateTime.Now.ToString("tt", CultureInfo.InvariantCulture).ToLower();
+        switch (tt)
+        {
+            case "am":
+                Console.WriteLine("Good morning, sunshine!");
+                break;
+            case "pm":
+                Console.WriteLine("Have a nice afternoon!");
+                break;
+            default:
+                Console.WriteLine("No idea what time it is.");
+                break;
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Sisesta hinne:");
+        string hinne = Console.ReadLine().ToUpper();
+
+        if (hinne == "A")
+        {
+            Console.WriteLine("Suurepärane!");
+        }
+        else if (hinne == "B")
+        {
+            Console.WriteLine("Väga hea!");
+        }
+        else if (hinne == "C")
+        {
+            Console.WriteLine("Hea!");
+        }
+        else if (hinne == "D")
+        {
+            Console.WriteLine("Rahuldav");
+        }
+        else if (hinne == "E")
+        {
+            Console.WriteLine("Kasin");
+        }
+        else if (hinne == "F")
+        {
+            Console.WriteLine("Puudulik");
+        }
+        else
+        {
+            Console.WriteLine("Vale väärtus");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Sisestage hinne (A-F): ");
+        char grade = Char.ToUpper(Console.ReadKey().KeyChar);
+        Console.WriteLine();
+
+        switch (grade)
+        {
+            case 'A':
+                Console.WriteLine("Suurepärane!");
+                break;
+            case 'B':
+                Console.WriteLine("Väga hea!");
+                break;
+            case 'C':
+                Console.WriteLine("Hea!");
+                break;
+            case 'D':
+                Console.WriteLine("Rahuldav");
+                break;
+            case 'E':
+                Console.WriteLine("Kasin");
+                break;
+            case 'F':
+                Console.WriteLine("Puudulik");
+                break;
+            default:
+                Console.WriteLine("Vale väärtus");
+                break;
+        }
+    }
+}
