@@ -24,7 +24,6 @@ switch (userOperator)
         break;
 }
 
-// functions
 static void Add(int a, int b)
 {
     Console.WriteLine($"{a} + {b} = {a + b}");
@@ -53,11 +52,9 @@ static void Divide(int a, int b)
 }
 
 
-// Küsi kasutajalt nime
 Console.WriteLine("Enter your name:");
 string userName = Console.ReadLine();
 
-// Tervita kasutajat nimepidi
 GreetUser(userName);
 
 static void GreetUser(string someName)
@@ -66,7 +63,6 @@ static void GreetUser(string someName)
 }
 
 
-// Funktsiooni HelloWorld() väljakutsumine
 HelloWorld();
 
 static void HelloWorld()
