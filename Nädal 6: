@@ -6,7 +6,6 @@ class Program
     {
         string[] colors = { "red", "green", "blue", "pink", "yellow" };
 
-        // Loop through the array in reverse order
         for (int i = colors.Length - 1; i >= 0; i--)
         {
             Console.WriteLine(colors[i]);
@@ -21,16 +20,12 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Array of possible colors
         string[] colors = { "red", "green", "blue", "pink", "yellow" };
 
-        // Create a new instance of the Random class
         Random rnd = new Random();
 
-        // Select a random color from the array
         string randomColor = colors[rnd.Next(0, colors.Length)];
 
-        // Output the randomly selected color
         Console.WriteLine($"You should wear {randomColor} today.");
     }
 }
@@ -44,13 +39,10 @@ class Program
     {
         string[] colors = { "red", "green", "blue", "pink", "yellow" };
 
-        // Loop through the array in reverse order
         for (int i = colors.Length - 1; i >= 0; i--)
         {
-            // Calculate the reverse index number
             int reverseIndex = colors.Length - i;
 
-            // Output the numbered item in reverse order
             Console.WriteLine($"{reverseIndex}. {colors[i]}");
         }
     }
@@ -66,17 +58,14 @@ class Program
         string hello = "Hello, world!".Trim(); // Remove any leading or trailing whitespace
         int spaceCounter = 0;
         
-        // Iterate through each character in the string
         for (int i = 0; i < hello.Length; i++)
         {
-            // Check if the character is a whitespace
             if (char.IsWhiteSpace(hello[i]))
             {
                 spaceCounter++;
             }
         }
         
-        // The number of words is the number of spaces plus one
         int wordCount = spaceCounter + 1;
         Console.WriteLine($"Number of words: {wordCount}");
     }
@@ -92,17 +81,14 @@ class Program
         string hello = "Hello, world!";
         int counter = 0;
 
-        // Iterate through each character in the string
         for (int i = 0; i < hello.Length; i++)
         {
-            // Check if the character is either 'L' or 'l'
             if (hello[i] == 'L' || hello[i] == 'l')
             {
                 counter++;
             }
         }
 
-        // Output the count of 'L' and 'l' characters
         Console.WriteLine($"There are {counter} 'L' or 'l' characters in the string \"{hello}\"");
     }
 }
@@ -116,14 +102,12 @@ class Program
     {
         string dontPanic = "D0n'7 p4n1c";
         
-        // Replace incorrect characters with the correct ones
         dontPanic = dontPanic
             .Replace('0', 'o')
             .Replace('7', 't')
             .Replace('4', 'a')
             .Replace('1', 'i');
         
-        // Output the corrected phrase
         Console.WriteLine(dontPanic);
     }
 }
@@ -137,13 +121,10 @@ class Program
     {
         string hello = "hello!";
         
-        // Convert the first character to uppercase
         char upperFirstChar = char.ToUpper(hello[0]);
 
-        // Replace the first character with its uppercase version
         hello = upperFirstChar + hello.Substring(1);
 
-        // Output the result
         Console.WriteLine(hello);
     }
 }
