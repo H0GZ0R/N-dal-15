@@ -1,0 +1,150 @@
+Console.WriteLine("Enter the operation (+, -, *, or /):");
+char userOperator = Char.Parse(Console.ReadLine());
+Console.WriteLine("Enter a:");
+int firstNum = Int32.Parse(Console.ReadLine());
+Console.WriteLine("Enter b:");
+int secondNum = Int32.Parse(Console.ReadLine());
+
+switch (userOperator)
+{
+    case '+':
+        Add(firstNum, secondNum);
+        break;
+    case '-':
+        Subtract(firstNum, secondNum);
+        break;
+    case '*':
+        Multiply(firstNum, secondNum);
+        break;
+    case '/':
+        Divide(firstNum, secondNum);
+        break;
+    default:
+        Console.WriteLine("Invalid operator");
+        break;
+}
+
+// functions
+static void Add(int a, int b)
+{
+    Console.WriteLine($"{a} + {b} = {a + b}");
+}
+
+static void Subtract(int a, int b)
+{
+    Console.WriteLine($"{a} - {b} = {a - b}");
+}
+
+static void Multiply(int a, int b)
+{
+    Console.WriteLine($"{a} * {b} = {a * b}");
+}
+
+static void Divide(int a, int b)
+{
+    if (b != 0)
+    {
+        Console.WriteLine($"{a} / {b} = {a / b}");
+    }
+    else
+    {
+        Console.WriteLine("Error: Division by zero is not allowed.");
+    }
+}
+
+
+// Küsi kasutajalt nime
+Console.WriteLine("Enter your name:");
+string userName = Console.ReadLine();
+
+// Tervita kasutajat nimepidi
+GreetUser(userName);
+
+static void GreetUser(string someName)
+{
+    Console.WriteLine($"Hello, {someName}!");
+}
+
+
+// Funktsiooni HelloWorld() väljakutsumine
+HelloWorld();
+
+static void HelloWorld()
+{
+    Console.WriteLine("Hello, World!");
+}
+
+Console.WriteLine("How many steps have you walked today?");
+int usersSteps = Int32.Parse(Console.ReadLine());
+
+string result = HealthMonitor(usersSteps);
+
+Console.WriteLine(result);
+
+static string HealthMonitor(int steps)
+{
+    if (steps < 4000)
+    {
+        return "You need to move more.";
+    }
+    else if (steps >= 4000 && steps < 8000)
+    {
+        return "Health goal achieved.";
+    }
+    else
+    {
+        return "Well done!";
+    }
+}
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Vali teisendus:");
+        Console.WriteLine("1. Celsiusesse");
+        Console.WriteLine("2. Fahrenheiti");
+        
+        int choice;
+        while (true)
+        {
+            Console.Write("Sisesta oma valik (1 või 2): ");
+            if (int.TryParse(Console.ReadLine(), out choice) && (choice == 1 || choice == 2))
+                break;
+            Console.WriteLine("Vale valik! Palun sisesta 1 või 2.");
+        }
+        
+        switch (choice)
+        {
+            case 1:
+                Console.Write("Sisesta temperatuur Fahrenheiti: ");
+                if (double.TryParse(Console.ReadLine(), out double fahrenheit))
+                    ConvertToCelsius(fahrenheit);
+                else
+                    Console.WriteLine("Vale sisend! Palun sisesta arv.");
+                break;
+                
+            case 2:
+                Console.Write("Sisesta temperatuur Celsiuses: ");
+                if (double.TryParse(Console.ReadLine(), out double celsius))
+                    ConvertToFahrenheit(celsius);
+                else
+                    Console.WriteLine("Vale sisend! Palun sisesta arv.");
+                break;
+        }
+    }
+
+    static void ConvertToCelsius(double fahrenheit)
+    {
+        double celsius = (fahrenheit - 32) * 5 / 9;
+        Console.WriteLine($"{fahrenheit}°F = {celsius:F2}°C");
+    }
+
+    static void ConvertToFahrenheit(double celsius)
+    {
+        double fahrenheit = (celsius * 9) / 5 + 32;
+        Console.WriteLine($"{celsius}°C = {fahrenheit:F2}°F");
+    }
+}
