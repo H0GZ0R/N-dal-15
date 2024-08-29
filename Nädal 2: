@@ -1,0 +1,46 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter your age:");
+        int userAge = Int32.Parse(Console.ReadLine());
+
+        if (userAge < 13)
+        {
+            Console.WriteLine("Welcome to Gmail!");
+        }
+        else
+        {
+            Console.WriteLine("You are too young for a Gmail account.");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter your age.");
+        int userAge = Int32.Parse(Console.ReadLine());
+
+        if (userAge > 18)
+        {
+            Console.WriteLine("You are old enough to drive on your own.");
+        }
+        else if (userAge < 18)
+        {
+            Console.WriteLine("You are too young to drive on your own.");
+        }
+        else
+        {
+            Console.WriteLine("Congratulations! You've turned eighteen and may apply for your driving license now.");
+        }
+    }
+}
+
+
