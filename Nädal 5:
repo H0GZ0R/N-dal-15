@@ -1,0 +1,129 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string userPIN, userName, password;
+
+        Console.WriteLine("Enter PIN:");
+        userPIN = Console.ReadLine();
+
+        if (userPIN == "1234")
+        {
+            Console.WriteLine("Enter your username:");
+            userName = Console.ReadLine();
+            
+            Console.WriteLine("Enter your password:");
+            password = Console.ReadLine();
+            
+            if (userName == "admin1" && password == "admin1234")
+            {
+                Console.WriteLine("Welcome!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid login credentials.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid PIN");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string userPIN, userName, password;
+
+        Console.WriteLine("Enter PIN:");
+        userPIN = Console.ReadLine();
+
+        if (userPIN == "1234")
+        {
+            Console.WriteLine("Enter your username:");
+            userName = Console.ReadLine();
+            
+            Console.WriteLine("Enter your password:");
+            password = Console.ReadLine();
+            
+            if (userName == "admin" && password == "admin1234")
+            {
+                Console.WriteLine("Welcome!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid login credentials.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid PIN");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        double height, weight, userBMI;
+
+        Console.WriteLine("Enter your height in cm:");
+        height = Double.Parse(Console.ReadLine()) / 100; // Convert cm to meters
+
+        Console.WriteLine("Enter your weight in kg:");
+        weight = Double.Parse(Console.ReadLine());
+
+        userBMI = Math.Round(weight / (height * height), 2); // Calculate BMI and round to 2 decimal places
+
+        Console.WriteLine($"Your BMI is {userBMI}");
+
+        if (userBMI < 19)
+        {
+            Console.WriteLine("Underweight");
+        }
+        else if (userBMI >= 19 && userBMI <= 25)
+        {
+            Console.WriteLine("Normal weight");
+        }
+        else if (userBMI > 25 && userBMI <= 30)
+        {
+            Console.WriteLine("Overweight");
+        }
+        else
+        {
+            Console.WriteLine("Obesity");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter the first letter of your first name:");
+        char userLetter = Char.Parse(Console.ReadLine().ToLower());
+
+        if (userLetter == 'a' || userLetter == 'e' || userLetter == 'i' || userLetter == 'o' || userLetter == 'u')
+        {
+            Console.WriteLine("I can sing it.");
+        }
+        else
+        {
+            Console.WriteLine("There is no way I can sing it.");
+        }
+    }
+}
