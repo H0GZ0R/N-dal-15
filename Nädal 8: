@@ -1,19 +1,17 @@
-string path = @"C:\Users\JV\data";  // Faili asukoht
-string fileName = "chuck.txt";  // Faili nimi
+string path = @"C:\Users\JV\data";
+string fileName = "chuck.txt";
 
-// Loeb kõik failis olevad read massiivi
 string[] lines = File.ReadAllLines(Path.Combine(path, fileName));
 
-// Kuvab failis oleva sisu koos rea numbritega
 ShowFileContent(lines);
 
 static void ShowFileContent(string[] fileContentArray)
 {
-    int i = 1;  // Algväärtustame rea numbri 1-ga
-    foreach (string line in fileContentArray)  // Käime kõik failist loetud read läbi
+    int i = 1;
+    foreach (string line in fileContentArray)
     {
-        Console.WriteLine($"{i}. {line}");  // Kuvame rea numbri ja rea sisu
-        i++;  // Suurendame rea numbrit ühe võrra iga tsükli järel
+        Console.WriteLine($"{i}. {line}");
+        i++;
     }
 }
 
