@@ -1,0 +1,76 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Enter a number");
+        int userNumber = Int32.Parse(Console.ReadLine());
+
+        for (int i = 1; i <= 10; i++)
+        {
+            Console.WriteLine($"{i} * {userNumber} = {i * userNumber}");
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string userPIN;
+        int triesUsed = 0;
+        while (triesUsed < 3)
+        {
+            Console.WriteLine("Enter your PIN:");
+            userPIN = Console.ReadLine();
+            if (userPIN == "1234")
+            {
+                Console.WriteLine("Welcome!");
+                triesUsed = 3;
+            }
+            else
+            {
+                triesUsed++;
+                if (triesUsed < 3)
+                {
+                    Console.WriteLine($"Wrong PIN. Try again. {3 - triesUsed} tries left.");
+                }
+                else
+                {
+                    Console.WriteLine("You have used all your tries.");
+                }
+            }
+        }
+    }
+}
+
+
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string userPIN;
+        while (true)
+        {
+            Console.WriteLine("Enter your PIN");
+            userPIN = Console.ReadLine();
+            if (userPIN == "1234")
+            {
+                Console.WriteLine("Welcome!");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Wrong PIN. Try again.");
+            }
+        }
+    }
+}
+
+
