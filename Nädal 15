@@ -11,13 +11,10 @@ class Program
 
         foreach (string line in giftsFromFile)
         {
-            // Jagab rea tükeldamiseks
             string[] tempArray = line.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-            // Eeldatakse, et failis on andmed kujul "Name Present"
             if (tempArray.Length >= 2)
             {
-                // Loob Gift objekti
                 Gift newGift = new Gift(tempArray[0], tempArray[1]);
                 myGifts.Add(newGift);
             }
@@ -77,9 +74,8 @@ class Program
         foreach (string line in data)
         {
             string[] tempArray = line.Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries);
-            if (tempArray.Length >= 3) // Eeldame, et failis on vähemalt 3 osa (pealkiri, aasta, hinnang)
+            if (tempArray.Length >= 3)
             {
-                // Loome uue Movie objekti
                 Movie newMovie = new Movie(tempArray[0], tempArray[1], tempArray[2]);
                 myMovies.Add(newMovie);
             }
@@ -104,25 +100,21 @@ class Movie
     private string year;
     private string rating;
 
-    // Getter for Title
     public string Title
     {
         get { return title; }
     }
 
-    // Getter for Year
     public string Year
     {
         get { return year; }
     }
 
-    // Getter for Rating
     public string Rating
     {
         get { return rating; }
     }
 
-    // Constructor
     public Movie(string _title, string _year, string _rating)
     {
         title = _title;
