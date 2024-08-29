@@ -24,7 +24,7 @@ static void FindCustomer(SQLiteConnection myConnection)
         Console.WriteLine($"Search result: ID: {readerRowid}. {readerStringName} {readerStringLastName}. Status: {readerStringStatus}");
     }
     
-    reader.Close(); // Sulgeb andmelugeja pärast kasutamist
+    reader.Close();
 }
 
 
@@ -41,13 +41,13 @@ static void DisplayProduct(SQLiteConnection myConnection)
     while (reader.Read())
     {
         string readerRowid = reader["rowid"].ToString();
-        string readerProductName = reader.GetString(1); // Index 1 vastab 'productname'
-        int readerProductPrice = reader.GetInt32(2); // Index 2 vastab 'price'
+        string readerProductName = reader.GetString(1);
+        int readerProductPrice = reader.GetInt32(2);
        
         Console.WriteLine($"{readerRowid}. {readerProductName}. Price: {readerProductPrice}");
     }
     
-    reader.Close(); // Sulgeb andmelugeja pärast kasutamist
+    reader.Close();
 }
 
 
@@ -65,13 +65,13 @@ static void DisplayProductWithCategory(SQLiteConnection myConnection)
     while (reader.Read())
     {
         string readerRowid = reader["rowid"].ToString();
-        string readerProductName = reader.GetString(1); // Index 1 vastab 'productname'
-        string readerProductCategory = reader.GetString(2); // Index 2 vastab 'CategoryName'
+        string readerProductName = reader.GetString(1);
+        string readerProductCategory = reader.GetString(2);
        
         Console.WriteLine($"{readerRowid}. {readerProductName}. Category: {readerProductCategory}");
     }
     
-    reader.Close(); // Sulgeb andmelugeja pärast kasutamist
+    reader.Close();
 }
 
 
